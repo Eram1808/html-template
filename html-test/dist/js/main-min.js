@@ -1,0 +1,1 @@
+let btn=document.getElementById("mybtn");function sortTable(){const t=document.getElementById("tbl").tBodies[0];let e=[];for(let n=0,l=t.rows.length;n<l;n++){let l=t.rows[n],o=parseInt(l.cells[1].textContent||l.cells[1].innerText);isNaN(o)||e.push([o,l])}e.sort((t,e)=>t[0]-e[0]);for(let n=0,l=e.length;n<l;n++)t.appendChild(e[n][1]);e=null}btn.addEventListener("click",sortTable);

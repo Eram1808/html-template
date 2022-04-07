@@ -1,0 +1,7 @@
+//@import 'blocks/**/*.scss';
+@import './blocks/utilities/reset';
+@import './blocks/utilities/variable.scss';
+@import './blocks/components/banner.scss';
+body {
+    display: inline;
+}
