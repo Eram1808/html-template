@@ -2,6 +2,9 @@
 @import './blocks/utilities/reset';
 @import './blocks/utilities/variable.scss';
 @import './blocks/components/banner.scss';
+@import './blocks/components/header.scss';
+@import './blocks/utilities/mixins.scss';
+@import './blocks/utilities/theme.scss';
 body {
     display: inline;
 }

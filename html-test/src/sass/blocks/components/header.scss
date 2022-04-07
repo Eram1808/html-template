@@ -1,0 +1,129 @@
+header {
+    background: #fff;
+    padding: 10px 0 25px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header_one {
+    display: flex;
+    color: $theme-color;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_one-img {
+    a {
+        display: block;
+        transition: all 0.4s;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.header_one-search {
+    margin-top: 20px
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    a {
+        background: #fff;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 4px;
+        transition: all 0.6s;
+        img {
+            max-width: 15px;
+        }
+    }
+    .fb {
+        &:hover {
+            background: #039be5;
+        }
+    }
+    .tweet {
+        &:hover {
+            background: #03a9f4;
+        }
+    }
+    .google {
+        &:hover {
+            background: #e94643;
+        }
+    }
+    .linkdn {
+        &:hover {
+            background: #3371b7;
+        }
+    }
+    .utube {
+        &:hover {
+            background: #d12121;
+        }
+    }
+}
+
+.search__inner {
+    position: relative;
+    input {
+        background-color: transparent;
+        border: 1px solid #e5e5e5;
+        min-width: 187px;
+        height: 40px;
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: $bold;
+        padding: 0 20px;
+        &:hover,
+        &:focus,
+        &:focus-visible {
+            border: 1px solid #e5e5e5;
+        }
+    }
+    button {
+        background: 0 0;
+        border: none;
+        position: absolute;
+        right: 0;
+        top: 41%;
+        transform: scale(.7) translateY(-50%);
+    }
+}
+
+.menu {
+    padding: 30px 0;
+    position: sticky;
+    .menu__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 -20px;
+        .menu__inner-links {
+            padding: 0 20px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 700;
+            color: #000;
+            font-weight: $bold;
+            text-decoration: none;
+            transition: all 0.4s;
+            &.active,
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+}

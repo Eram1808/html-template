@@ -108,6 +108,21 @@ section {
 body {
     font-family: $font-base;
     line-height: 1.2;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 
 ul {
@@ -122,6 +137,12 @@ q {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .wrapper {

@@ -1,0 +1,80 @@
+.banner {
+    >.wrapper {
+        max-width: none;
+        padding: 0;
+    }
+    .banner__inner-list-image {
+        position: relative;
+    }
+    .banner__inner-list {
+        li {
+            position: relative;
+            .banner__inner-list-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 1170px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align: center;
+            }
+            &:nth-child(3n+2) {
+                .banner__inner-list-text {
+                    left: 100px;
+                    text-align: left;
+                    transform: translate(0, -50%);
+                }
+                .banner__inner-heading {
+                    text-align: left;
+                }
+            }
+            &:nth-child(3n+3) {
+                .banner__inner-list-text {
+                    right: 100px;
+                    left: auto;
+                    text-align: right;
+                    transform: translate(0, -50%);
+                }
+                .banner__inner-heading {
+                    text-align: right;
+                }
+            }
+        }
+        .slick-arrow {
+            display: none!important;
+        }
+        .slick-dots {
+            list-style: none;
+            margin: 0 auto;
+            text-align: center;
+            top: 50%;
+            left: 0;
+            position: absolute;
+            transform: rotate(90deg) translateY(-50%);
+            li {
+                display: inline-block;
+                margin: 0 10px;
+                button {
+                    transition: 0.2s background-color ease-in-out 0s;
+                    border: none;
+                    padding: 0;
+                    color: transparent;
+                    width: 10px;
+                    height: 10px;
+                    background-color: $theme-color;
+                    margin-right: 10px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+                &.slick-active button {
+                    background-color: #fff;
+                    pointer-events: none;
+                }
+            }
+        }
+        .slick-slide img {
+            width: 100%!important;
+        }
+    }
+}

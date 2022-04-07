@@ -1,0 +1,1 @@
+$(".banner__inner-list").slick({dots:!0,infinite:!1,speed:300,slidesToShow:1,slidesToScroll:1,fade:!0,autoplaySpeed:3e3});

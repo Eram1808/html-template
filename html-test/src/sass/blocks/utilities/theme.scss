@@ -1,0 +1,100 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    min-height: 60px;
+    padding: 23px 40px;
+    letter-spacing: 0.2em;
+    border-radius: 30px;
+    line-height: 1;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 0.4s linear 0s;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    margin: 20px 0;
+    @include mquery(mobile) {
+        min-width: none;
+        width: 100%;
+        height: auto;
+    }
+    &.yellow {
+        background: $yellow;
+        &:hover {
+            background: $theme-color
+        }
+    }
+    &.pink {
+        background: #f48670
+    }
+}
+
+.button__red {
+    @extend .button;
+    background: $theme-color;
+    &:hover {
+        background: $yellow;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $base-color;
+    font-weight: 600;
+    line-height: 1.2;
+    word-break: break-word;
+}
+
+p,
+span {
+    color: $base-color-two;
+}
+
+.heading {
+    margin-bottom: 30px;
+    font-size: 48px;
+    position: relative;
+    line-height: 0.85;
+    font-weight: 600;
+}
+
+.heading__small {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: $theme-color;
+}
+
+.banner__inner-heading {
+    font-size: 100px;
+    line-height: 0.8;
+    position: relative;
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+    padding-bottom: 35px;
+    strong {
+        font-weight: 900;
+    }
+}
+
+.theme-color {
+    color: $theme-color;
+}
+
+.black {
+    color: #000!important;
+}
+
+.white {
+    color: #fff!important;
+}

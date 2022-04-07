@@ -1,0 +1,50 @@
+//breakpoint
+@mixin mquery($size) {
+    @if $size==xlarge {
+        @media only screen and (min-width: 1400px) {
+            @content;
+        }
+    }
+    @if $size==wrap {
+        @media only screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+    @if $size==large {
+        @media only screen and (max-width: 1199px) {
+            @content;
+        }
+    }
+    @if $size==tab {
+        @media only screen and (min-width: 768px) {
+            @content;
+        }
+    }
+    @if $size==medium {
+        @media only screen and (max-width: 991px) {
+            @content;
+        }
+    }
+    @if $size==mobile {
+        @media only screen and (max-width: 767px) {
+            @content;
+        }
+    }
+    @if $size==small {
+        @media only screen and (max-width: 480px) {
+            @content;
+        }
+    }
+    @if $size==xsmall {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    }
+}
+
+@mixin flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
