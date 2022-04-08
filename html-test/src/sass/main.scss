@@ -5,6 +5,6 @@
 @import './blocks/components/header.scss';
 @import './blocks/utilities/mixins.scss';
 @import './blocks/utilities/theme.scss';
-body {
-    display: inline;
-}
+@import './blocks/layout/about-us.scss';
+@import './blocks/layout/steps.scss';
+@import './blocks/layout/testimonial.scss';

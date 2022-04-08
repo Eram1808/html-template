@@ -1,0 +1,14 @@
+.about_us {
+    background: url(../../dist/images/bg-section.jpg) no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+    overflow: hidden;
+    .about_us-inner {
+        width: calc(50% - 90px);
+        float: right;
+        padding: 0 20px;
+        p {
+            line-height: 2;
+        }
+    }
+}

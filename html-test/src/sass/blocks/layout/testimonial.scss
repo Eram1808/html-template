@@ -1,0 +1,115 @@
+.testimonial {
+    padding: 100px 0;
+}
+
+.testimonial__list {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+        &:nth-child(3n+1) {
+            .testimonial__list-img {
+                &::before {
+                    background-color: $yellow;
+                }
+            }
+        }
+        &:nth-child(3n+2) {
+            .testimonial__list-img {
+                &::before {
+                    background-color: $pink;
+                }
+            }
+        }
+        &:nth-child(3n+3) {
+            .testimonial__list-img {
+                &::before {
+                    background-color: $theme-color;
+                }
+            }
+        }
+    }
+    .testimonial__list-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        &::before {
+            content: "!!";
+            font-size: 30px;
+            text-align: center;
+            line-height: 80px;
+            position: absolute;
+            bottom: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            color: #ffffff;
+            background-color: $yellow;
+            left: 55%;
+        }
+        img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 300px;
+            border-radius: 50%;
+        }
+    }
+    .testimonial__list-text {
+        padding-top: 30px;
+        h4 {
+            position: relative;
+            word-wrap: break-word;
+            line-height: 0.85;
+            font-weight: 600;
+            font-size: 48px;
+        }
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            margin: 10px 0;
+            display: block;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        p {
+            font-style: italic;
+            line-height: 1.6;
+            font-size: 20px;
+            padding: 0 180px;
+        }
+    }
+    .slick-arrow {
+        display: none!important;
+    }
+    .slick-dots {
+        list-style: none;
+        margin: 0 auto;
+        text-align: center;
+        li {
+            display: inline-block;
+            margin: 0 10px;
+            button {
+                transition: 0.2s background-color ease-in-out 0s;
+                border: none;
+                padding: 0;
+                color: transparent;
+                width: 10px;
+                height: 10px;
+                background-color: #000;
+                margin-right: 10px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            &.slick-active button {
+                background-color: $theme-color;
+                pointer-events: none;
+            }
+        }
+    }
+    .slick-slide img {
+        width: 100%!important;
+    }
+}

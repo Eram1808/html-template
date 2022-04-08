@@ -6,12 +6,12 @@
         }
     }
     @if $size==wrap {
-        @media only screen and (min-width: 1200px) {
+        @media only screen and (min-width: 1025px) {
             @content;
         }
     }
     @if $size==large {
-        @media only screen and (max-width: 1199px) {
+        @media only screen and (max-width: 1024px) {
             @content;
         }
     }

@@ -18,9 +18,12 @@
     text-decoration: none;
     margin: 20px 0;
     @include mquery(mobile) {
-        min-width: none;
+        min-width: 0;
         width: 100%;
+        min-height: 0;
         height: auto;
+        padding: 10px;
+        font-size: 11px;
     }
     &.yellow {
         background: $yellow;
@@ -56,6 +59,11 @@ h6 {
 p,
 span {
     color: $base-color-two;
+    margin-bottom: 15px;
+}
+
+section {
+    position: relative;
 }
 
 .heading {
@@ -72,6 +80,7 @@ span {
     text-transform: uppercase;
     letter-spacing: 0.2em;
     color: $theme-color;
+    margin: 10px 0;
 }
 
 .banner__inner-heading {
@@ -97,4 +106,43 @@ span {
 
 .white {
     color: #fff!important;
+}
+
+.pink {
+    color: $pink;
+}
+
+.red {
+    color: $theme-color;
+}
+
+.yellow {
+    color: $yellow;
+}
+
+.link {
+    color: #000;
+    transition: all 0.4s;
+    text-decoration: none;
+    &:hover {
+        color: $theme-color;
+    }
+}
+
+.link-pink {
+    @extend .link;
+    &:hover {
+        color: $pink;
+    }
+}
+
+.link-yellow {
+    @extend .link;
+    &:hover {
+        color: $yellow;
+    }
+}
+
+.pointer {
+    pointer-events: none;
 }

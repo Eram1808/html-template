@@ -5,11 +5,13 @@ var minify = require('gulp-minify-css');
 var sassGlob = require('gulp-sass-glob');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+const pxToRem = require('gulp-px2rem-converter')
 
 gulp.task('styles', () => {
     return gulp.src('src/sass/main*.scss', { sourcemaps: true })
         .pipe(sass().on('error', sass.logError))
         .pipe(minify())
+        .pipe(pxToRem())
         .pipe(sassGlob())
         .pipe(gulp.dest('dist/css/'));
 });
@@ -35,6 +37,8 @@ gulp.task('watch', () => {
         gulp.series(['clean', 'styles'])(done);
     });
 });
+
+
 
 
 gulp.task('default', gulp.series(['clean', 'styles', 'js']));

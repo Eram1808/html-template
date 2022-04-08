@@ -1,4 +1,4 @@
-$('.banner__inner-list').slick({
+$('.banner__inner-list, .testimonial__list').slick({
     dots: true,
     infinite: false,
     speed: 300,
@@ -6,6 +6,6 @@ $('.banner__inner-list').slick({
     slidesToScroll: 1,
     dots: true,
     fade: true,
-    //autoplay: true,
+    autoplay: true,
     autoplaySpeed: 3000,
 });
