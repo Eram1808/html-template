@@ -7,11 +7,13 @@
 .steps__inner-list {
     display: flex;
     align-items: center;
-    margin: 0 -20px;
     text-align: center;
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
+    @include mquery(wrap) {
+        margin: 0 -20px;
+    }
     h4 {
         margin-bottom: 10px;
         a {
@@ -22,9 +24,14 @@
     }
     li {
         text-align: center;
-        width: calc(33.33% - 40px);
         padding: 0 20px;
         position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+        @include mquery(wrap) {
+            width: calc(33.33% - 40px);
+            margin-bottom: 0;
+        }
         &:last-child {
             .steps_img {
                 &::after {
@@ -71,6 +78,9 @@
                 width: 48px;
                 height: 48px;
                 right: -40px;
+                @include mquery(mobile) {
+                    display: none;
+                }
             }
             img {
                 transition: all 0.6s;

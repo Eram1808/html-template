@@ -1,0 +1,64 @@
+@import '../utilities/reset';
+.calculator {
+    background: url(../../dist/images/calculator.JPG) no-repeat;
+    background-size: cover;
+    padding: 40px 0 80px;
+    overflow: hidden;
+    .calculator-inner {
+        width: 100%;
+        display: inline-block;
+        @include mquery(wrap) {
+            width: 45%;
+        }
+        p {
+            color: #fff;
+            line-height: 2;
+        }
+    }
+    .calculator__amount {
+        margin-top: 20px;
+        li {
+            display: flex;
+            justify-content: space-between;
+            div {
+                width: calc(50% - 20px);
+                margin-bottom: 15px;
+            }
+        }
+        .calculator__amount-text input,
+        .calculator__amount-select select {
+            width: 100%;
+            color: #333333;
+            background-color: #ffffff;
+            border-color: #ffffff;
+            font-size: 14px !important;
+            text-transform: uppercase;
+            min-height: 40px !important;
+            border-radius: 50px;
+            box-shadow: none;
+            padding: 0 20px;
+            font-weight: 700;
+            border: none;
+        }
+        .calculator__amount-select {
+            position: relative;
+            select {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                text-indent: 1px;
+            }
+            .select_arrow {
+                border: solid $theme-color;
+                border-width: 0 2px 2px 0;
+                display: inline-block;
+                padding: 3px;
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                position: absolute;
+                right: 0;
+                top: 14px;
+                margin: 0 20px;
+            }
+        }
+    }
+}

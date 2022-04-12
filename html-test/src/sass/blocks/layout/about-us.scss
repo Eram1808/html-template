@@ -1,12 +1,18 @@
 .about_us {
     background: url(../../dist/images/bg-section.jpg) no-repeat;
-    background-size: cover;
     padding: 40px 0;
     overflow: hidden;
+    background-position: right center;
+    @include mquery(wrap) {
+        background-size: cover;
+    }
     .about_us-inner {
-        width: calc(50% - 90px);
+        width: 100%;
         float: right;
         padding: 0 20px;
+        @include mquery(wrap) {
+            width: calc(50% - 90px);
+        }
         p {
             line-height: 2;
         }

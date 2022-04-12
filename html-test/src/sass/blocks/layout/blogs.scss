@@ -1,0 +1,133 @@
+@import '../utilities/mixins.scss';
+.blogs {
+    padding: 40px 0;
+    @include mquery(wrap) {
+        padding: 80px 0;
+    }
+}
+
+.blog__cards {
+    display: flex;
+    width: 100%;
+    margin-top: 90px;
+    @include mquery(wrap) {
+        margin: 80px -15px 0;
+    }
+    @include mquery(tab) {
+        margin: 80px 0 0;
+    }
+    li.slick-slide {
+        border: 1px solid #e5e5e5;
+        width: 100%;
+        @include mquery(wrap) {
+            margin: 0 15px;
+        }
+        @include mquery(tab) {
+            margin: 0 15px;
+        }
+        &:nth-child(3n+2) {
+            .blog__cards-text {
+                &::before {
+                    background: #bf3654 url(../../dist/images/pencil.png) no-repeat center center;
+                    background-size: 50%;
+                }
+            }
+        }
+        &:nth-child(3n+2) {
+            .blog__cards-text {
+                &::before {
+                    background: #f58770 url(../../dist/images/pencil.png) no-repeat center center;
+                    background-size: 50%;
+                }
+            }
+        }
+        &:nth-child(3n+3) {
+            .blog__cards-text {
+                &::before {
+                    background: #fab915 url(../../dist/images/pencil.png) no-repeat center center;
+                    background-size: 50%;
+                }
+            }
+        }
+        h4 {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.2;
+            margin: 50px 0 20px;
+            a {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 1.2;
+            }
+        }
+        p {
+            font-size: 16px;
+            line-height: 30px;
+        }
+    }
+    .slick-arrow {
+        @include slick-arrow-text;
+        @include mquery(mobile) {
+            top: -50px;
+        }
+    }
+    .blog__cards-text {
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid #e5e5e5;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            background: #bf3654 url(../../dist/images/pencil.png) no-repeat center center;
+            left: 50%;
+            top: -30px;
+            height: 60px;
+            width: 60px;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            background-size: 50%;
+        }
+    }
+    .blog__footer-list {
+        display: inline-flex;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        >li {
+            border-right: 1px solid #e5e5e5;
+            position: relative;
+            min-height: 80px;
+            width: calc(33.33% - 20px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:last-child {
+                border-right: 0;
+            }
+            span {
+                position: absolute;
+                font-size: 48px;
+                font-weight: 900;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0.08;
+                z-index: 1;
+                text-transform: uppercase;
+            }
+            p,
+            time {
+                color: #000;
+                font-weight: 800;
+                font-size: 15px;
+                text-align: center;
+                text-transform: uppercase;
+                position: relative;
+                z-index: 9;
+            }
+        }
+    }
+}

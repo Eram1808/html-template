@@ -1,3 +1,4 @@
+@import '../utilities/mixins.scss';
 .banner {
     >.wrapper {
         max-width: none;
@@ -10,34 +11,50 @@
         li {
             position: relative;
             .banner__inner-list-text {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                max-width: 1170px;
-                overflow: hidden;
-                text-overflow: ellipsis;
+                position: relative;
+                background: $base-color;
                 text-align: center;
+                padding: 50px 0 80px;
+                @include mquery(wrap) {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    max-width: 1170px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    background: none;
+                }
             }
             &:nth-child(3n+2) {
                 .banner__inner-list-text {
-                    left: 100px;
-                    text-align: left;
-                    transform: translate(0, -50%);
+                    left: auto;
+                    @include mquery(wrap) {
+                        left: 100px;
+                        text-align: left;
+                        transform: translate(0, -50%);
+                    }
                 }
                 .banner__inner-heading {
-                    text-align: left;
+                    @include mquery(wrap) {
+                        text-align: left;
+                    }
                 }
             }
             &:nth-child(3n+3) {
                 .banner__inner-list-text {
-                    right: 100px;
-                    left: auto;
-                    text-align: right;
-                    transform: translate(0, -50%);
+                    right: auto;
+                    @include mquery(wrap) {
+                        right: 100px;
+                        left: auto;
+                        text-align: right;
+                        transform: translate(0, -50%);
+                    }
                 }
                 .banner__inner-heading {
-                    text-align: right;
+                    @include mquery(wrap) {
+                        text-align: right;
+                    }
                 }
             }
         }
@@ -48,10 +65,16 @@
             list-style: none;
             margin: 0 auto;
             text-align: center;
-            top: 50%;
-            left: 0;
             position: absolute;
-            transform: rotate(90deg) translateY(-50%);
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            @include mquery(wrap) {
+                left: 0;
+                top: 50%;
+                position: absolute;
+                transform: rotate(90deg) translateY(-50%);
+            }
             li {
                 display: inline-block;
                 margin: 0 10px;

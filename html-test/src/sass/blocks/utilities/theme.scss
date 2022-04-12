@@ -1,10 +1,8 @@
+@import './mixins.scss';
 .button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 200px;
-    min-height: 60px;
-    padding: 23px 40px;
     letter-spacing: 0.2em;
     border-radius: 30px;
     line-height: 1;
@@ -13,25 +11,33 @@
     transition: all 0.4s linear 0s;
     margin: 10px 0;
     cursor: pointer;
-    font-size: 14px;
     color: #fff;
     text-decoration: none;
     margin: 20px 0;
-    @include mquery(mobile) {
-        min-width: 0;
-        width: 100%;
-        min-height: 0;
-        height: auto;
-        padding: 10px;
-        font-size: 11px;
+    @include mquery(wrap) {
+        min-width: 200px;
+        min-height: 60px;
+        font-size: 14px;
+        padding: 23px 40px;
     }
-    &.yellow {
+    @include mquery(mobile) {
+        min-width: 160px;
+        max-width: 100%;
+        min-height: 0;
+        width: auto;
+        height: auto;
+        font-size: 11px;
+        margin: 20px 0;
+        height: 50px;
+        padding: 0 23px;
+    }
+    &.yellow-btn {
         background: $yellow;
         &:hover {
             background: $theme-color
         }
     }
-    &.pink {
+    &.pink-btn {
         background: #f48670
     }
 }
@@ -68,10 +74,13 @@ section {
 
 .heading {
     margin-bottom: 30px;
-    font-size: 48px;
+    font-size: 36px;
     position: relative;
     line-height: 0.85;
     font-weight: 600;
+    @include mquery(wrap) {
+        font-size: 48px;
+    }
 }
 
 .heading__small {
@@ -84,15 +93,18 @@ section {
 }
 
 .banner__inner-heading {
-    font-size: 100px;
+    font-size: 54px;
     line-height: 0.8;
     position: relative;
     color: #fff;
     font-weight: 100;
     text-align: center;
-    padding-bottom: 35px;
     strong {
         font-weight: 900;
+    }
+    @include mquery(wrap) {
+        font-size: 100px;
+        padding-bottom: 35px;
     }
 }
 
@@ -109,15 +121,15 @@ section {
 }
 
 .pink {
-    color: $pink;
+    color: $pink!important;
 }
 
 .red {
-    color: $theme-color;
+    color: $theme-color!important;
 }
 
 .yellow {
-    color: $yellow;
+    color: $yellow!important;
 }
 
 .link {
@@ -145,4 +157,36 @@ section {
 
 .pointer {
     pointer-events: none;
+}
+
+.center {
+    text-align: center!important;
+}
+
+.border-line {
+    border: 1px solid #e5e5e5;
+}
+
+.slick-track {
+    margin-left: 0 !important;
+    align-items: inherit;
+    display: flex !important;
+}
+
+.slick-list {
+    width: 100% !important;
+}
+
+.slick-slide {
+    height: auto !important;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+    background: rgb(0, 0, 0, 0.6);
+    header,
+    main,
+    section {
+        background: rgb(0, 0, 0, 0.6);
+    }
 }

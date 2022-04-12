@@ -1,0 +1,79 @@
+@import '../utilities/mixins.scss';
+.table-list {
+    padding: 30px 0;
+    background-color: #f6f7f9;
+    @include mquery(wrap) {
+        background: #f6f7f9 url(../../dist/images/bg-table.jpg) no-repeat;
+        background-position-x: center;
+        padding: 60px 0;
+    }
+}
+
+.table_inner-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    .table_inner-item {
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+        >div {
+            padding: 40px 0;
+            width: 100%;
+            @include mquery(wrap) {
+                width: calc(25% - 20px);
+            }
+            &:hover {
+                img {
+                    @include flash;
+                }
+            }
+            img {
+                max-width: 40px;
+                margin: 0 auto;
+            }
+            h4 {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 1.2;
+                margin: 10px 0;
+                a {
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 1.2;
+                    text-decoration: none;
+                }
+            }
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 30px;
+            }
+        }
+    }
+    .table-one,
+    .table-three {
+        @include mquery(wrap) {
+            justify-content: space-around;
+        }
+    }
+    .table-two {
+        @include mquery(wrap) {
+            justify-content: space-between;
+        }
+    }
+    .table-three {
+        div {
+            &:first-child {
+                @include mquery(wrap) {
+                    margin-right: 180px;
+                }
+            }
+            &:last-child {
+                @include mquery(wrap) {
+                    margin-left: 180px;
+                }
+            }
+        }
+    }
+}

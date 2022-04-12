@@ -20,13 +20,13 @@
             @content;
         }
     }
-    @if $size==medium {
-        @media only screen and (max-width: 991px) {
-            @content;
-        }
-    }
+    // @if $size==medium {
+    //     @media only screen and (max-width: 991px) {
+    //         @content;
+    //     }
+    // }
     @if $size==mobile {
-        @media only screen and (max-width: 767px) {
+        @media only screen and (max-width: 1023px) {
             @content;
         }
     }
@@ -47,4 +47,132 @@
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+}
+
+@mixin flash {
+    opacity: 1;
+    -webkit-animation: flash 1s;
+    animation: flash 1s;
+}
+
+@-webkit-keyframes flash {
+    0% {
+        opacity: .3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: .3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.flash {
+    opacity: 1;
+    -webkit-animation: flash 1s;
+    animation: flash 0.5s;
+}
+
+@-webkit-keyframes flash {
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    25% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes flash {
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    25% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+@mixin slick-arrow-text {
+    text-align: center;
+    border: 0px;
+    border-radius: 0;
+    cursor: pointer;
+    margin: 0;
+    position: absolute;
+    overflow: unset;
+    font-size: 0;
+    z-index: 9;
+    top: -50px;
+    background: transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mquery(mobile) {
+        top: auto;
+    }
+    &.slick-prev {
+        padding-right: 12.25rem;
+        border-right: 2px solid #ddd;
+        &::before {
+            content: 'PREV';
+            position: absolute;
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #808080;
+            width: auto;
+            padding: 5px 30px;
+        }
+        &::after {
+            content: '';
+            background: darkgray;
+            width: 2px;
+            height: 15px;
+            left: 54%;
+            top: 8px;
+            display: block;
+            position: absolute;
+        }
+        &:hover {
+            &::before {
+                color: $theme-color;
+            }
+        }
+    }
+    &.slick-next {
+        padding-left: 2.25rem;
+        &::before {
+            content: 'Next';
+            position: absolute;
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #808080;
+            width: auto;
+            padding: 5px 30px;
+        }
+        &:hover {
+            &::before {
+                color: $theme-color;
+            }
+        }
+    }
+    &.slick-disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+.slick-arrow {
+    @include slick-arrow-text();
 }

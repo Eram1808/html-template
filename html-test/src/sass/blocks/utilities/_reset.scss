@@ -110,6 +110,7 @@ body {
     line-height: 1.2;
     box-sizing: border-box;
     background: #fff;
+    box-sizing: border-box;
 }
 
 html,
@@ -125,16 +126,19 @@ html {
     height: 100%;
     position: relative;
     overflow: visible;
+    scroll-behavior: smooth;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 * {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     outline: none;
-}
-
-ul {
-    list-style: none;
 }
 
 blockquote,

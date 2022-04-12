@@ -16,6 +16,7 @@
 
 <body>
     <header>
+        <button onclick="topFunction()" id="myBtn"></button>
         <div class="wrapper">
 
             <div class="header_one">
@@ -42,11 +43,12 @@
         </div>
     </header>
     <main>
-        <section class="menu">
+        <section class="menu menu-overlay" id="menu">
             <div class="wrapper">
+                <span class='menu-icon'><span class='bar1'></span><span class='bar2'></span><span class='bar3'></span></span>
                 <div class="menu__inner">
                     <div class="menu__inner-container">
-                        <a href="" class="menu__inner-links active">Home</a>
+                        <a href="" class="menu__inner-links sub-menu active">Home</a>
                         <div class="menu__inner-sub-menu">
                             <a href="" class="menu__inner-links-sub-menu"> home 1</a>
                             <a href="" class="menu__inner-links-sub-menu"> home 1</a>
@@ -58,7 +60,7 @@
                         </div>
                     </div>
                     <div class="menu__inner-container">
-                        <a href="" class="menu__inner-links">Pages</a>
+                        <a href="" class="menu__inner-links sub-menu">Pages</a>
                         <div class="menu__inner-sub-menu">
                             <a href="" class="menu__inner-links-sub-menu"> home 1</a>
                             <a href="" class="menu__inner-links-sub-menu"> home 1</a>
@@ -101,7 +103,7 @@
                                         <strong class="theme-color">Invest</strong><br>
                                         <strong class="white">& Trade,</strong>
                                     </h1>
-                                    <a href="#" class="button__red banner__inner-button yellow">Join us</a>
+                                    <a href="#" class="button__red banner__inner-button yellow-btn">Join us</a>
                                 </div>
                             </li>
                             <li>
@@ -111,7 +113,7 @@
                                 <div class="banner__inner-list-text">
                                     <h1 class="banner__inner-heading">Choose<br> <strong>Progress</strong><br> <strong>&
                                             success</strong></h1>
-                                    <a href="#" class="button__red banner__inner-button pink">About us</a>
+                                    <a href="#" class="button__red banner__inner-button pink-btn">About us</a>
                                 </div>
                             </li>
                         </ul>
@@ -224,8 +226,341 @@
                 </div>
             </div>
         </section>
-    </main>
+        <section class="section section--5">
+            <div class="calculator">
+                <div class="wrapper">
+                    <div class="calculator-inner">
+                        <p class="heading__small red">BITCOIN</p>
+                        <h2 class="heading">Currency Calculator</h2>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut laboret dolore magna aliquyam erat, sed diam voluptua.</p>
+                        <ul class="calculator__amount">
+                            <li>
+                                <div class="calculator__amount-text">
+                                    <input id="amount-1" type="text" placeholder="enter amount">
+                                </div>
+                                <div class="calculator__amount-select">
+                                    <span class="select_arrow"></span>
+                                    <select><option value="0XBTC">0XBTC (0XBTC)</option><option value="1337">1337 (1337)</option><option value="1ECO">1ECO (1ECO)</option><option value="1IN">1IN (1IN)</option><option value="1INCH">1INCH (1INCH)</option><option value="1PECO">1PECO (1PECO)</option><option value="20B">20B (20B)</option><option value="20D">20D (20D)</option><option value="20E">20E (20E)</option><option value="20U">20U (20U)</option><option value="223">223 (223)</option><option value="2BT">2BT (2BT)</option><option value="404">404 (404)</option><option value="420G">420G (420G)</option><option value="4ART">4ART (4ART)</option><option value="700">700 (700)</option><option value="777">777 (777)</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="calculator__amount-text">
+                                    <input id="amount-1" type="text" placeholder="enter amount">
+                                </div>
+                                <div class="calculator__amount-select">
+                                    <span class="select_arrow"></span>
+                                    <select><option value="0XBTC">0XBTC (0XBTC)</option><option value="1337">1337 (1337)</option><option value="1ECO">1ECO (1ECO)</option><option value="1IN">1IN (1IN)</option><option value="1INCH">1INCH (1INCH)</option><option value="1PECO">1PECO (1PECO)</option><option value="20B">20B (20B)</option><option value="20D">20D (20D)</option><option value="20E">20E (20E)</option><option value="20U">20U (20U)</option><option value="223">223 (223)</option><option value="2BT">2BT (2BT)</option><option value="404">404 (404)</option><option value="420G">420G (420G)</option><option value="4ART">4ART (4ART)</option><option value="700">700 (700)</option><option value="777">777 (777)</option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="" class="button__red">buy now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section--6">
+            <div class="table-list">
+                <div class="wrapper">
+                    <div class="table_inner">
+                        <div class="table_inner-list">
+                            <div class="table_inner-item table-one">
+                                <div>
+                                    <img src="./dist/images/lock.png" alt="">
+                                    <h4>
+                                        <a href="" class="link-yellow">Safe & Secure</a>
+                                    </h4>
+                                    <p>Be sure in your account security and your funds safe.</p>
+                                </div>
+                                <div>
+                                    <img src="./dist/images/phone.png" alt="">
+                                    <h4><a href="" class="link-pink">Mobile Apps</a></h4>
+                                    <p>Perfectly developed mobile apps will open new opportunities.</p>
+                                </div>
+                            </div>
+                            <div class="table_inner-item  table-two">
+                                <div>
+                                    <img src="./dist/images/chat.png" alt="">
+                                    <h4><a href="" class="link">Wallet</a></h4>
+                                    <p>Perfectly developed mobile apps will open new opportunities.</p>
+                                </div>
+                                <div>
+                                    <img src="./dist/images/lock.png" alt="">
+                                    <h4> <a href="" class="link-yellow">Safe & Secure</a></h4>
+                                    <p>Be sure in your account security and your funds safe.</p>
+                                </div>
+                            </div>
+                            <div class="table_inner-item  table-three">
+                                <div>
+                                    <img src="./dist/images/phone.png" alt="">
+                                    <h4><a href="" class="link-pink">Mobile Apps</a></h4>
+                                    <p>Perfectly developed mobile apps will open new opportunities.</p>
+                                </div>
+                                <div>
+                                    <img src="./dist/images/chat.png" alt="">
+                                    <h4><a href="" class="link">Wallet</a></h4>
+                                    <p>Perfectly developed mobile apps will open new opportunities.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section--7">
+            <div class="blogs">
+                <div class="wrapper">
+                    <div class="blogs__inner">
+                        <p class="heading__small center">OUR BLOG</p>
+                        <h2 class="heading center">News & Events</h2>
+                        <ul class="blog__cards">
+                            <li>
+                                <img src="./dist/images/b1.jpg" alt="">
+                                <div class="blog__cards-text">
+                                    <h4><a href="" class="link">Lorem ipsum dolor sit consetetur</a></h4>
+                                    <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore dolore magna.</p>
+                                </div>
+                                <div class="blog__cards-footer">
+                                    <ul class="blog__footer-list">
+                                        <li>
+                                            <span>ON</span>
+                                            <time>11.11.11</time>
+                                        </li>
+                                        <li>
+                                            <span>BY</span>
+                                            <p>Admin</p>
+                                        </li>
+                                        <li>
+                                            <span>In</span>
+                                            <p>News</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./dist/images/b2.jpg" alt="">
+                                <div class="blog__cards-text">
+                                    <h4><a href="" class="link-pink">Lorem ipsum dolor sit consetetur</a></h4>
+                                    <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore dolore magna.</p>
+                                </div>
+                                <div class="blog__cards-footer">
+                                    <ul class="blog__footer-list">
+                                        <li>
+                                            <span>ON</span>
+                                            <time>11.11.11</time>
+                                        </li>
+                                        <li>
+                                            <span>BY</span>
+                                            <p>Admin</p>
+                                        </li>
+                                        <li>
+                                            <span>In</span>
+                                            <p>News</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./dist/images/b3.jpg" alt="">
+                                <div class="blog__cards-text">
+                                    <h4><a href="" class="link-yellow">Lorem ipsum dolor sit consetetur</a></h4>
+                                    <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore dolore magna.</p>
+                                </div>
+                                <div class="blog__cards-footer">
+                                    <ul class="blog__footer-list">
+                                        <li>
+                                            <span>ON</span>
+                                            <time>11.11.11</time>
+                                        </li>
+                                        <li>
+                                            <span>BY</span>
+                                            <p>Admin</p>
+                                        </li>
+                                        <li>
+                                            <span>In</span>
+                                            <p>News</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./dist/images/b1.jpg" alt="">
+                                <div class="blog__cards-text">
+                                    <h4><a href="" class="link">Lorem ipsum dolor sit consetetur</a></h4>
+                                    <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore dolore magna.</p>
+                                </div>
+                                <div class="blog__cards-footer">
+                                    <ul class="blog__footer-list">
+                                        <li>
+                                            <span>ON</span>
+                                            <time>11.11.11</time>
+                                        </li>
+                                        <li>
+                                            <span>BY</span>
+                                            <p>Admin</p>
+                                        </li>
+                                        <li>
+                                            <span>In</span>
+                                            <p>News</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./dist/images/b2.jpg" alt="">
+                                <div class="blog__cards-text">
+                                    <h4><a href="" class="link-pink">Lorem ipsum dolor sit consetetur</a></h4>
+                                    <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore dolore magna.</p>
+                                </div>
+                                <div class="blog__cards-footer">
+                                    <ul class="blog__footer-list">
+                                        <li>
+                                            <span>ON</span>
+                                            <time>11.11.11</time>
+                                        </li>
+                                        <li>
+                                            <span>BY</span>
+                                            <p>Admin</p>
+                                        </li>
+                                        <li>
+                                            <span>In</span>
+                                            <p>News</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./dist/images/b3.jpg" alt="">
+                                <div class="blog__cards-text">
+                                    <h4><a href="" class="link-yellow">Lorem ipsum dolor sit consetetur</a></h4>
+                                    <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore dolore magna.</p>
+                                </div>
+                                <div class="blog__cards-footer">
+                                    <ul class="blog__footer-list">
+                                        <li>
+                                            <span>ON</span>
+                                            <time>11.11.11</time>
+                                        </li>
+                                        <li>
+                                            <span>BY</span>
+                                            <p>Admin</p>
+                                        </li>
+                                        <li>
+                                            <span>In</span>
+                                            <p>News</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./dist/images/b1.jpg" alt="">
+                                <div class="blog__cards-text">
+                                    <h4><a href="" class="link">Lorem ipsum dolor sit consetetur</a></h4>
+                                    <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore dolore magna.</p>
+                                </div>
+                                <div class="blog__cards-footer">
+                                    <ul class="blog__footer-list">
+                                        <li>
+                                            <span>ON</span>
+                                            <time>11.11.11</time>
+                                        </li>
+                                        <li>
+                                            <span>BY</span>
+                                            <p>Admin</p>
+                                        </li>
+                                        <li>
+                                            <span>In</span>
+                                            <p>News</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./dist/images/b2.jpg" alt="">
+                                <div class="blog__cards-text">
+                                    <h4><a href="" class="link-pink">Lorem ipsum dolor sit consetetur</a></h4>
+                                    <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore dolore magna.</p>
+                                </div>
+                                <div class="blog__cards-footer">
+                                    <ul class="blog__footer-list">
+                                        <li>
+                                            <span>ON</span>
+                                            <time>11.11.11</time>
+                                        </li>
+                                        <li>
+                                            <span>BY</span>
+                                            <p>Admin</p>
+                                        </li>
+                                        <li>
+                                            <span>In</span>
+                                            <p>News</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./dist/images/b3.jpg" alt="">
+                                <div class="blog__cards-text">
+                                    <h4><a href="" class="link-yellow">Lorem ipsum dolor sit consetetur</a></h4>
+                                    <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore dolore magna.</p>
+                                </div>
+                                <div class="blog__cards-footer">
+                                    <ul class="blog__footer-list">
+                                        <li>
+                                            <span>ON</span>
+                                            <time>11.11.11</time>
+                                        </li>
+                                        <li>
+                                            <span>BY</span>
+                                            <p>Admin</p>
+                                        </li>
+                                        <li>
+                                            <span>In</span>
+                                            <p>News</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section--8">
+            <div class="form-main">
+                <div class="wrapper">
+                    <div class="form-inner center">
+                        <p class="heading__small center">get a</p>
+                        <h2 class="heading center">Free Quote</h2>
+                        <form action="#">
+                            <fieldset>
+                                <label for="name">
+                                  <input name="fname" placeholder="Full Name">
+                                </label>
+                                <label for="mail">
+                                <input name="email" type="email" placeholder="Email Address">
+                              </label>
+                                <label for="subject">
+                                <input name="subject" type="text" placeholder="Your Subject">
+                              </label>
+                                <label for="message">
+                                <textarea name="comments" placeholder="Your Question"></textarea>
+                              </label>
 
+                            </fieldset>
+                        </form>
+                        <a href="" class="button__red center">Send Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="center footer_text">
+            © Copyright 2017. All Rights Reserved.
+        </div>
+    </footer>
 </body>
 <script src="dist/js/main.js"></script>
 
