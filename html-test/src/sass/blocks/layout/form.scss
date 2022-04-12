@@ -4,7 +4,6 @@
     background: #f6f7f9 url(../../dist/images/form-bg.jpg) no-repeat;
     background-size: cover;
     @include mquery(mobile) {
-        margin-bottom: 400px;
         background-position: right center;
     }
     form {

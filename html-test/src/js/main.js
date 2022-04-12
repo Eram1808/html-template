@@ -54,6 +54,10 @@ if ($(window).width() <= 1023) {
 
 
 }
+if ($(window).width() >= 1023) {
+    new WOW().init();
+}
+
 
 
 //Get the button

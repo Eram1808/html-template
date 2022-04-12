@@ -155,7 +155,7 @@ header {
             &.sub-menu {
                 @include mquery(wrap) {
                     &::before {
-                        display: none;
+                        display: none!important;
                     }
                 }
                 &::before {

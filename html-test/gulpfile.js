@@ -6,13 +6,23 @@ var sassGlob = require('gulp-sass-glob');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 const pxToRem = require('gulp-px2rem-converter');
+var postcss = require('gulp-postcss');
+//var autoprefixer = require('autoprefixer');
+//var cssnext = require('cssnext');
+//var precss = require('precss');
 
 gulp.task('styles', () => {
+    // var processors = [
+    //     autoprefixer,
+    //     cssnext,
+    //     precss
+    // ];
     return gulp.src('src/sass/main*.scss', { sourcemaps: true })
         .pipe(sass().on('error', sass.logError))
         .pipe(minify())
         .pipe(pxToRem())
         .pipe(sassGlob())
+        //.pipe(postcss(processors))
         .pipe(gulp.dest('dist/css/'));
 });
 
